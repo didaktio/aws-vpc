@@ -1,0 +1,953 @@
+{
+  "version": "9.0.0",
+  "artifacts": {
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    },
+    "JaiTest1Stack": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://unknown-account/unknown-region",
+      "properties": {
+        "templateFile": "JaiTest1Stack.template.json"
+      },
+      "metadata": {
+        "/JaiTest1Stack": [
+          {
+            "type": "aws:cdk:asset",
+            "data": {
+              "path": "asset.257070d30dfb485ae8d4f96e7451dd639bc6ff56843ec55e29c783b0abb88fd0",
+              "id": "257070d30dfb485ae8d4f96e7451dd639bc6ff56843ec55e29c783b0abb88fd0",
+              "packaging": "zip",
+              "sourceHash": "257070d30dfb485ae8d4f96e7451dd639bc6ff56843ec55e29c783b0abb88fd0",
+              "s3BucketParameter": "AssetParameters257070d30dfb485ae8d4f96e7451dd639bc6ff56843ec55e29c783b0abb88fd0S3BucketDCFA7F2B",
+              "s3KeyParameter": "AssetParameters257070d30dfb485ae8d4f96e7451dd639bc6ff56843ec55e29c783b0abb88fd0S3VersionKeyFA393294",
+              "artifactHashParameter": "AssetParameters257070d30dfb485ae8d4f96e7451dd639bc6ff56843ec55e29c783b0abb88fd0ArtifactHash0BA05952"
+            },
+            "trace": [
+              "ConstructNode.addMetadata (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/@aws-cdk/core/lib/construct-compat.ts:431:92)",
+              "LegacyStackSynthesizer.doAddFileAsset (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:171:23)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:74:19)",
+              "JaiTest1Stack.addFileAsset (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/@aws-cdk/core/lib/stack.ts:657:29)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:78:25)",
+              "new Asset (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:143:40)",
+              "AssetCode.bind (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/@aws-cdk/aws-lambda/lib/code.ts:267:20)",
+              "new Function (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/@aws-cdk/aws-lambda/lib/function.ts:580:29)",
+              "new NodejsFunction (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/@aws-cdk/aws-lambda-nodejs/lib/function.ts:113:5)",
+              "new SomeService (/Users/Jai/Downloads/Code/AUDI/_rn/src/jai-test-1-service.ts:11:21)",
+              "new JaiTest1Stack (/Users/Jai/Downloads/Code/AUDI/_rn/src/jai-test-1-stack.ts:8:5)",
+              "Object.<anonymous> (/Users/Jai/Downloads/Code/AUDI/_rn/src/index.ts:5:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/ts-node/src/index.ts:1295:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/ts-node/src/index.ts:1298:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/ts-node/src/bin.ts:246:14)",
+              "Object.<anonymous> (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/ts-node/src/bin.ts:382:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "/Users/Jai/.nvm/versions/node/v14.16.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/JaiTest1Stack/Jai test 1/VPC/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Jaitest1VPCB2D56B44",
+            "trace": [
+              "new Vpc (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1199:21)",
+              "new SomeService (/Users/Jai/Downloads/Code/AUDI/_rn/src/jai-test-1-service.ts:17:12)",
+              "new JaiTest1Stack (/Users/Jai/Downloads/Code/AUDI/_rn/src/jai-test-1-stack.ts:8:5)",
+              "Object.<anonymous> (/Users/Jai/Downloads/Code/AUDI/_rn/src/index.ts:5:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/ts-node/src/index.ts:1295:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/ts-node/src/index.ts:1298:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/ts-node/src/bin.ts:246:14)",
+              "Object.<anonymous> (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/ts-node/src/bin.ts:382:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "/Users/Jai/.nvm/versions/node/v14.16.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/JaiTest1Stack/Jai test 1/VPC/PublicSubnet1/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Jaitest1VPCPublicSubnet1Subnet60F18B8D",
+            "trace": [
+              "new Subnet (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1533:20)",
+              "new PublicSubnet (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1748:5)",
+              "/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1379:32",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1361:28)",
+              "Vpc.createSubnets (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1356:12)",
+              "new Vpc (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1228:10)",
+              "new SomeService (/Users/Jai/Downloads/Code/AUDI/_rn/src/jai-test-1-service.ts:17:12)",
+              "new JaiTest1Stack (/Users/Jai/Downloads/Code/AUDI/_rn/src/jai-test-1-stack.ts:8:5)",
+              "Object.<anonymous> (/Users/Jai/Downloads/Code/AUDI/_rn/src/index.ts:5:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/ts-node/src/index.ts:1295:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/ts-node/src/index.ts:1298:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/ts-node/src/bin.ts:246:14)",
+              "Object.<anonymous> (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/ts-node/src/bin.ts:382:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "/Users/Jai/.nvm/versions/node/v14.16.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/JaiTest1Stack/Jai test 1/VPC/PublicSubnet1/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Jaitest1VPCPublicSubnet1RouteTableF90C1F3F",
+            "trace": [
+              "new Subnet (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1551:19)",
+              "new PublicSubnet (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1748:5)",
+              "/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1379:32",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1361:28)",
+              "Vpc.createSubnets (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1356:12)",
+              "new Vpc (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1228:10)",
+              "new SomeService (/Users/Jai/Downloads/Code/AUDI/_rn/src/jai-test-1-service.ts:17:12)",
+              "new JaiTest1Stack (/Users/Jai/Downloads/Code/AUDI/_rn/src/jai-test-1-stack.ts:8:5)",
+              "Object.<anonymous> (/Users/Jai/Downloads/Code/AUDI/_rn/src/index.ts:5:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/ts-node/src/index.ts:1295:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/ts-node/src/index.ts:1298:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/ts-node/src/bin.ts:246:14)",
+              "Object.<anonymous> (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/ts-node/src/bin.ts:382:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "/Users/Jai/.nvm/versions/node/v14.16.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/JaiTest1Stack/Jai test 1/VPC/PublicSubnet1/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Jaitest1VPCPublicSubnet1RouteTableAssociation145F9CED",
+            "trace": [
+              "new Subnet (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1557:5)",
+              "new PublicSubnet (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1748:5)",
+              "/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1379:32",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1361:28)",
+              "Vpc.createSubnets (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1356:12)",
+              "new Vpc (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1228:10)",
+              "new SomeService (/Users/Jai/Downloads/Code/AUDI/_rn/src/jai-test-1-service.ts:17:12)",
+              "new JaiTest1Stack (/Users/Jai/Downloads/Code/AUDI/_rn/src/jai-test-1-stack.ts:8:5)",
+              "Object.<anonymous> (/Users/Jai/Downloads/Code/AUDI/_rn/src/index.ts:5:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/ts-node/src/index.ts:1295:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/ts-node/src/index.ts:1298:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/ts-node/src/bin.ts:246:14)",
+              "Object.<anonymous> (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/ts-node/src/bin.ts:382:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "/Users/Jai/.nvm/versions/node/v14.16.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/JaiTest1Stack/Jai test 1/VPC/PublicSubnet1/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Jaitest1VPCPublicSubnet1DefaultRoute88C0ACE3",
+            "trace": [
+              "PublicSubnet.addDefaultInternetRoute (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1573:19)",
+              "/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1247:22",
+              "Array.forEach (<anonymous>)",
+              "new Vpc (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1246:46)",
+              "new SomeService (/Users/Jai/Downloads/Code/AUDI/_rn/src/jai-test-1-service.ts:17:12)",
+              "new JaiTest1Stack (/Users/Jai/Downloads/Code/AUDI/_rn/src/jai-test-1-stack.ts:8:5)",
+              "Object.<anonymous> (/Users/Jai/Downloads/Code/AUDI/_rn/src/index.ts:5:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/ts-node/src/index.ts:1295:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/ts-node/src/index.ts:1298:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/ts-node/src/bin.ts:246:14)",
+              "Object.<anonymous> (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/ts-node/src/bin.ts:382:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "/Users/Jai/.nvm/versions/node/v14.16.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/JaiTest1Stack/Jai test 1/VPC/PublicSubnet1/EIP": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Jaitest1VPCPublicSubnet1EIPE1BD2027",
+            "trace": [
+              "PublicSubnet.addNatGateway (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1760:21)",
+              "NatGatewayProvider.configureNat (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/@aws-cdk/aws-ec2/lib/nat.ts:209:27)",
+              "Vpc.createNatGateways (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1331:14)",
+              "new Vpc (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1253:14)",
+              "new SomeService (/Users/Jai/Downloads/Code/AUDI/_rn/src/jai-test-1-service.ts:17:12)",
+              "new JaiTest1Stack (/Users/Jai/Downloads/Code/AUDI/_rn/src/jai-test-1-stack.ts:8:5)",
+              "Object.<anonymous> (/Users/Jai/Downloads/Code/AUDI/_rn/src/index.ts:5:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/ts-node/src/index.ts:1295:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/ts-node/src/index.ts:1298:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/ts-node/src/bin.ts:246:14)",
+              "Object.<anonymous> (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/ts-node/src/bin.ts:382:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "/Users/Jai/.nvm/versions/node/v14.16.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/JaiTest1Stack/Jai test 1/VPC/PublicSubnet1/NATGateway": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Jaitest1VPCPublicSubnet1NATGatewayE8209C81",
+            "trace": [
+              "PublicSubnet.addNatGateway (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1758:17)",
+              "NatGatewayProvider.configureNat (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/@aws-cdk/aws-ec2/lib/nat.ts:209:27)",
+              "Vpc.createNatGateways (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1331:14)",
+              "new Vpc (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1253:14)",
+              "new SomeService (/Users/Jai/Downloads/Code/AUDI/_rn/src/jai-test-1-service.ts:17:12)",
+              "new JaiTest1Stack (/Users/Jai/Downloads/Code/AUDI/_rn/src/jai-test-1-stack.ts:8:5)",
+              "Object.<anonymous> (/Users/Jai/Downloads/Code/AUDI/_rn/src/index.ts:5:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/ts-node/src/index.ts:1295:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/ts-node/src/index.ts:1298:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/ts-node/src/bin.ts:246:14)",
+              "Object.<anonymous> (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/ts-node/src/bin.ts:382:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "/Users/Jai/.nvm/versions/node/v14.16.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/JaiTest1Stack/Jai test 1/VPC/PrivateSubnet1/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Jaitest1VPCPrivateSubnet1Subnet4F64C80C",
+            "trace": [
+              "new Subnet (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1533:20)",
+              "new PrivateSubnet (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1786:5)",
+              "/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1384:33",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1361:28)",
+              "Vpc.createSubnets (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1356:12)",
+              "new Vpc (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1228:10)",
+              "new SomeService (/Users/Jai/Downloads/Code/AUDI/_rn/src/jai-test-1-service.ts:17:12)",
+              "new JaiTest1Stack (/Users/Jai/Downloads/Code/AUDI/_rn/src/jai-test-1-stack.ts:8:5)",
+              "Object.<anonymous> (/Users/Jai/Downloads/Code/AUDI/_rn/src/index.ts:5:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/ts-node/src/index.ts:1295:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/ts-node/src/index.ts:1298:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/ts-node/src/bin.ts:246:14)",
+              "Object.<anonymous> (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/ts-node/src/bin.ts:382:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "/Users/Jai/.nvm/versions/node/v14.16.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/JaiTest1Stack/Jai test 1/VPC/PrivateSubnet1/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Jaitest1VPCPrivateSubnet1RouteTable384187C1",
+            "trace": [
+              "new Subnet (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1551:19)",
+              "new PrivateSubnet (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1786:5)",
+              "/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1384:33",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1361:28)",
+              "Vpc.createSubnets (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1356:12)",
+              "new Vpc (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1228:10)",
+              "new SomeService (/Users/Jai/Downloads/Code/AUDI/_rn/src/jai-test-1-service.ts:17:12)",
+              "new JaiTest1Stack (/Users/Jai/Downloads/Code/AUDI/_rn/src/jai-test-1-stack.ts:8:5)",
+              "Object.<anonymous> (/Users/Jai/Downloads/Code/AUDI/_rn/src/index.ts:5:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/ts-node/src/index.ts:1295:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/ts-node/src/index.ts:1298:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/ts-node/src/bin.ts:246:14)",
+              "Object.<anonymous> (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/ts-node/src/bin.ts:382:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "/Users/Jai/.nvm/versions/node/v14.16.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/JaiTest1Stack/Jai test 1/VPC/PrivateSubnet1/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Jaitest1VPCPrivateSubnet1RouteTableAssociation5D115A9B",
+            "trace": [
+              "new Subnet (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1557:5)",
+              "new PrivateSubnet (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1786:5)",
+              "/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1384:33",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1361:28)",
+              "Vpc.createSubnets (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1356:12)",
+              "new Vpc (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1228:10)",
+              "new SomeService (/Users/Jai/Downloads/Code/AUDI/_rn/src/jai-test-1-service.ts:17:12)",
+              "new JaiTest1Stack (/Users/Jai/Downloads/Code/AUDI/_rn/src/jai-test-1-stack.ts:8:5)",
+              "Object.<anonymous> (/Users/Jai/Downloads/Code/AUDI/_rn/src/index.ts:5:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/ts-node/src/index.ts:1295:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/ts-node/src/index.ts:1298:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/ts-node/src/bin.ts:246:14)",
+              "Object.<anonymous> (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/ts-node/src/bin.ts:382:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "/Users/Jai/.nvm/versions/node/v14.16.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/JaiTest1Stack/Jai test 1/VPC/PrivateSubnet1/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Jaitest1VPCPrivateSubnet1DefaultRouteF6C66984",
+            "trace": [
+              "PrivateSubnet.addRoute (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1619:19)",
+              "NatGatewayProvider.configureSubnet (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/@aws-cdk/aws-ec2/lib/nat.ts:222:12)",
+              "NatGatewayProvider.configureNat (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/@aws-cdk/aws-ec2/lib/nat.ts:215:12)",
+              "Vpc.createNatGateways (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1331:14)",
+              "new Vpc (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1253:14)",
+              "new SomeService (/Users/Jai/Downloads/Code/AUDI/_rn/src/jai-test-1-service.ts:17:12)",
+              "new JaiTest1Stack (/Users/Jai/Downloads/Code/AUDI/_rn/src/jai-test-1-stack.ts:8:5)",
+              "Object.<anonymous> (/Users/Jai/Downloads/Code/AUDI/_rn/src/index.ts:5:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/ts-node/src/index.ts:1295:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/ts-node/src/index.ts:1298:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/ts-node/src/bin.ts:246:14)",
+              "Object.<anonymous> (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/ts-node/src/bin.ts:382:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "/Users/Jai/.nvm/versions/node/v14.16.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/JaiTest1Stack/Jai test 1/VPC/IGW": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Jaitest1VPCIGW5E6B9170",
+            "trace": [
+              "new Vpc (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1235:19)",
+              "new SomeService (/Users/Jai/Downloads/Code/AUDI/_rn/src/jai-test-1-service.ts:17:12)",
+              "new JaiTest1Stack (/Users/Jai/Downloads/Code/AUDI/_rn/src/jai-test-1-stack.ts:8:5)",
+              "Object.<anonymous> (/Users/Jai/Downloads/Code/AUDI/_rn/src/index.ts:5:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/ts-node/src/index.ts:1295:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/ts-node/src/index.ts:1298:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/ts-node/src/bin.ts:246:14)",
+              "Object.<anonymous> (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/ts-node/src/bin.ts:382:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "/Users/Jai/.nvm/versions/node/v14.16.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/JaiTest1Stack/Jai test 1/VPC/VPCGW": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Jaitest1VPCVPCGW370A7ACD",
+            "trace": [
+              "new Vpc (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1241:19)",
+              "new SomeService (/Users/Jai/Downloads/Code/AUDI/_rn/src/jai-test-1-service.ts:17:12)",
+              "new JaiTest1Stack (/Users/Jai/Downloads/Code/AUDI/_rn/src/jai-test-1-stack.ts:8:5)",
+              "Object.<anonymous> (/Users/Jai/Downloads/Code/AUDI/_rn/src/index.ts:5:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/ts-node/src/index.ts:1295:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/ts-node/src/index.ts:1298:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/ts-node/src/bin.ts:246:14)",
+              "Object.<anonymous> (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/ts-node/src/bin.ts:382:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "/Users/Jai/.nvm/versions/node/v14.16.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/JaiTest1Stack/Jai test 1/lambda-1/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Jaitest1lambda1ServiceRoleCD72FA8A",
+            "trace": [
+              "new Role (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/@aws-cdk/aws-iam/lib/role.ts:327:18)",
+              "new Function (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/@aws-cdk/aws-lambda/lib/function.ts:560:31)",
+              "new NodejsFunction (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/@aws-cdk/aws-lambda-nodejs/lib/function.ts:113:5)",
+              "new SomeService (/Users/Jai/Downloads/Code/AUDI/_rn/src/jai-test-1-service.ts:11:21)",
+              "new JaiTest1Stack (/Users/Jai/Downloads/Code/AUDI/_rn/src/jai-test-1-stack.ts:8:5)",
+              "Object.<anonymous> (/Users/Jai/Downloads/Code/AUDI/_rn/src/index.ts:5:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/ts-node/src/index.ts:1295:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/ts-node/src/index.ts:1298:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/ts-node/src/bin.ts:246:14)",
+              "Object.<anonymous> (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/ts-node/src/bin.ts:382:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "/Users/Jai/.nvm/versions/node/v14.16.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/JaiTest1Stack/Jai test 1/lambda-1/SecurityGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Jaitest1lambda1SecurityGroup03659F34",
+            "trace": [
+              "new SecurityGroup (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/@aws-cdk/aws-ec2/lib/security-group.ts:402:26)",
+              "NodejsFunction.configureVpc (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/@aws-cdk/aws-lambda/lib/function.ts:871:52)",
+              "new Function (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/@aws-cdk/aws-lambda/lib/function.ts:642:23)",
+              "new NodejsFunction (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/@aws-cdk/aws-lambda-nodejs/lib/function.ts:113:5)",
+              "new SomeService (/Users/Jai/Downloads/Code/AUDI/_rn/src/jai-test-1-service.ts:11:21)",
+              "new JaiTest1Stack (/Users/Jai/Downloads/Code/AUDI/_rn/src/jai-test-1-stack.ts:8:5)",
+              "Object.<anonymous> (/Users/Jai/Downloads/Code/AUDI/_rn/src/index.ts:5:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/ts-node/src/index.ts:1295:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/ts-node/src/index.ts:1298:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/ts-node/src/bin.ts:246:14)",
+              "Object.<anonymous> (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/ts-node/src/bin.ts:382:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "/Users/Jai/.nvm/versions/node/v14.16.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/JaiTest1Stack/Jai test 1/lambda-1/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Jaitest1lambda1B15BB37A",
+            "trace": [
+              "new Function (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/@aws-cdk/aws-lambda/lib/function.ts:622:35)",
+              "new NodejsFunction (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/@aws-cdk/aws-lambda-nodejs/lib/function.ts:113:5)",
+              "new SomeService (/Users/Jai/Downloads/Code/AUDI/_rn/src/jai-test-1-service.ts:11:21)",
+              "new JaiTest1Stack (/Users/Jai/Downloads/Code/AUDI/_rn/src/jai-test-1-stack.ts:8:5)",
+              "Object.<anonymous> (/Users/Jai/Downloads/Code/AUDI/_rn/src/index.ts:5:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/ts-node/src/index.ts:1295:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/ts-node/src/index.ts:1298:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/ts-node/src/bin.ts:246:14)",
+              "Object.<anonymous> (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/ts-node/src/bin.ts:382:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "/Users/Jai/.nvm/versions/node/v14.16.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/JaiTest1Stack/Jai test 1/lambda-1-api/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Jaitest1lambda1apiD48EAEBB",
+            "trace": [
+              "new RestApi (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/@aws-cdk/aws-apigateway/lib/restapi.ts:694:22)",
+              "new SomeService (/Users/Jai/Downloads/Code/AUDI/_rn/src/jai-test-1-service.ts:34:17)",
+              "new JaiTest1Stack (/Users/Jai/Downloads/Code/AUDI/_rn/src/jai-test-1-stack.ts:8:5)",
+              "Object.<anonymous> (/Users/Jai/Downloads/Code/AUDI/_rn/src/index.ts:5:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/ts-node/src/index.ts:1295:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/ts-node/src/index.ts:1298:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/ts-node/src/bin.ts:246:14)",
+              "Object.<anonymous> (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/ts-node/src/bin.ts:382:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "/Users/Jai/.nvm/versions/node/v14.16.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/JaiTest1Stack/Jai test 1/lambda-1-api/CloudWatchRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Jaitest1lambda1apiCloudWatchRoleDEAA85D0",
+            "trace": [
+              "new Role (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/@aws-cdk/aws-iam/lib/role.ts:327:18)",
+              "RestApi.configureCloudWatchRole (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/@aws-cdk/aws-apigateway/lib/restapi.ts:494:18)",
+              "new RestApi (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/@aws-cdk/aws-apigateway/lib/restapi.ts:711:12)",
+              "new SomeService (/Users/Jai/Downloads/Code/AUDI/_rn/src/jai-test-1-service.ts:34:17)",
+              "new JaiTest1Stack (/Users/Jai/Downloads/Code/AUDI/_rn/src/jai-test-1-stack.ts:8:5)",
+              "Object.<anonymous> (/Users/Jai/Downloads/Code/AUDI/_rn/src/index.ts:5:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/ts-node/src/index.ts:1295:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/ts-node/src/index.ts:1298:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/ts-node/src/bin.ts:246:14)",
+              "Object.<anonymous> (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/ts-node/src/bin.ts:382:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "/Users/Jai/.nvm/versions/node/v14.16.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/JaiTest1Stack/Jai test 1/lambda-1-api/Account": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Jaitest1lambda1apiAccount66333847",
+            "trace": [
+              "RestApi.configureCloudWatchRole (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/@aws-cdk/aws-apigateway/lib/restapi.ts:499:22)",
+              "new RestApi (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/@aws-cdk/aws-apigateway/lib/restapi.ts:711:12)",
+              "new SomeService (/Users/Jai/Downloads/Code/AUDI/_rn/src/jai-test-1-service.ts:34:17)",
+              "new JaiTest1Stack (/Users/Jai/Downloads/Code/AUDI/_rn/src/jai-test-1-stack.ts:8:5)",
+              "Object.<anonymous> (/Users/Jai/Downloads/Code/AUDI/_rn/src/index.ts:5:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/ts-node/src/index.ts:1295:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/ts-node/src/index.ts:1298:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/ts-node/src/bin.ts:246:14)",
+              "Object.<anonymous> (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/ts-node/src/bin.ts:382:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "/Users/Jai/.nvm/versions/node/v14.16.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/JaiTest1Stack/Jai test 1/lambda-1-api/Deployment/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Jaitest1lambda1apiDeploymentD4B8485F7c9e3d9d6bce5ee2d74b8a22c5844397",
+            "trace": [
+              "new Deployment (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/@aws-cdk/aws-apigateway/lib/deployment.ts:75:21)",
+              "RestApi.configureDeployment (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/@aws-cdk/aws-apigateway/lib/restapi.ts:510:32)",
+              "new RestApi (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/@aws-cdk/aws-apigateway/lib/restapi.ts:714:10)",
+              "new SomeService (/Users/Jai/Downloads/Code/AUDI/_rn/src/jai-test-1-service.ts:34:17)",
+              "new JaiTest1Stack (/Users/Jai/Downloads/Code/AUDI/_rn/src/jai-test-1-stack.ts:8:5)",
+              "Object.<anonymous> (/Users/Jai/Downloads/Code/AUDI/_rn/src/index.ts:5:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/ts-node/src/index.ts:1295:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/ts-node/src/index.ts:1298:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/ts-node/src/bin.ts:246:14)",
+              "Object.<anonymous> (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/ts-node/src/bin.ts:382:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "/Users/Jai/.nvm/versions/node/v14.16.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/JaiTest1Stack/Jai test 1/lambda-1-api/DeploymentStage.prod/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Jaitest1lambda1apiDeploymentStageprod4E25E0F9",
+            "trace": [
+              "new Stage (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/@aws-cdk/aws-apigateway/lib/stage.ts:240:22)",
+              "RestApi.configureDeployment (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/@aws-cdk/aws-apigateway/lib/restapi.ts:520:30)",
+              "new RestApi (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/@aws-cdk/aws-apigateway/lib/restapi.ts:714:10)",
+              "new SomeService (/Users/Jai/Downloads/Code/AUDI/_rn/src/jai-test-1-service.ts:34:17)",
+              "new JaiTest1Stack (/Users/Jai/Downloads/Code/AUDI/_rn/src/jai-test-1-stack.ts:8:5)",
+              "Object.<anonymous> (/Users/Jai/Downloads/Code/AUDI/_rn/src/index.ts:5:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/ts-node/src/index.ts:1295:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/ts-node/src/index.ts:1298:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/ts-node/src/bin.ts:246:14)",
+              "Object.<anonymous> (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/ts-node/src/bin.ts:382:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "/Users/Jai/.nvm/versions/node/v14.16.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/JaiTest1Stack/Jai test 1/lambda-1-api/Endpoint": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Jaitest1lambda1apiEndpoint32497A7E",
+            "trace": [
+              "RestApi.configureDeployment (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/@aws-cdk/aws-apigateway/lib/restapi.ts:525:7)",
+              "new RestApi (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/@aws-cdk/aws-apigateway/lib/restapi.ts:714:10)",
+              "new SomeService (/Users/Jai/Downloads/Code/AUDI/_rn/src/jai-test-1-service.ts:34:17)",
+              "new JaiTest1Stack (/Users/Jai/Downloads/Code/AUDI/_rn/src/jai-test-1-stack.ts:8:5)",
+              "Object.<anonymous> (/Users/Jai/Downloads/Code/AUDI/_rn/src/index.ts:5:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/ts-node/src/index.ts:1295:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/ts-node/src/index.ts:1298:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/ts-node/src/bin.ts:246:14)",
+              "Object.<anonymous> (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/ts-node/src/bin.ts:382:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "/Users/Jai/.nvm/versions/node/v14.16.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/JaiTest1Stack/Jai test 1/lambda-1-api/Default/GET/ApiPermission.JaiTest1StackJaitest1lambda1api013BE073.GET..": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Jaitest1lambda1apiGETApiPermissionJaiTest1StackJaitest1lambda1api013BE073GET44350E97",
+            "trace": [
+              "NodejsFunction.addPermission (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/@aws-cdk/aws-lambda/lib/function-base.ts:245:5)",
+              "LambdaIntegration.bind (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/@aws-cdk/aws-apigateway/lib/integrations/lambda.ts:63:18)",
+              "new Method (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/@aws-cdk/aws-apigateway/lib/method.ts:197:36)",
+              "RootResource.addMethod (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:187:12)",
+              "new SomeService (/Users/Jai/Downloads/Code/AUDI/_rn/src/jai-test-1-service.ts:40:14)",
+              "new JaiTest1Stack (/Users/Jai/Downloads/Code/AUDI/_rn/src/jai-test-1-stack.ts:8:5)",
+              "Object.<anonymous> (/Users/Jai/Downloads/Code/AUDI/_rn/src/index.ts:5:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/ts-node/src/index.ts:1295:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/ts-node/src/index.ts:1298:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/ts-node/src/bin.ts:246:14)",
+              "Object.<anonymous> (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/ts-node/src/bin.ts:382:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "/Users/Jai/.nvm/versions/node/v14.16.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/JaiTest1Stack/Jai test 1/lambda-1-api/Default/GET/ApiPermission.Test.JaiTest1StackJaitest1lambda1api013BE073.GET..": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Jaitest1lambda1apiGETApiPermissionTestJaiTest1StackJaitest1lambda1api013BE073GET57FCD4DA",
+            "trace": [
+              "NodejsFunction.addPermission (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/@aws-cdk/aws-lambda/lib/function-base.ts:245:5)",
+              "LambdaIntegration.bind (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/@aws-cdk/aws-apigateway/lib/integrations/lambda.ts:71:20)",
+              "new Method (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/@aws-cdk/aws-apigateway/lib/method.ts:197:36)",
+              "RootResource.addMethod (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:187:12)",
+              "new SomeService (/Users/Jai/Downloads/Code/AUDI/_rn/src/jai-test-1-service.ts:40:14)",
+              "new JaiTest1Stack (/Users/Jai/Downloads/Code/AUDI/_rn/src/jai-test-1-stack.ts:8:5)",
+              "Object.<anonymous> (/Users/Jai/Downloads/Code/AUDI/_rn/src/index.ts:5:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/ts-node/src/index.ts:1295:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/ts-node/src/index.ts:1298:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/ts-node/src/bin.ts:246:14)",
+              "Object.<anonymous> (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/ts-node/src/bin.ts:382:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "/Users/Jai/.nvm/versions/node/v14.16.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/JaiTest1Stack/Jai test 1/lambda-1-api/Default/GET/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Jaitest1lambda1apiGET78FC94F1",
+            "trace": [
+              "new Method (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/@aws-cdk/aws-apigateway/lib/method.ts:215:22)",
+              "RootResource.addMethod (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:187:12)",
+              "new SomeService (/Users/Jai/Downloads/Code/AUDI/_rn/src/jai-test-1-service.ts:40:14)",
+              "new JaiTest1Stack (/Users/Jai/Downloads/Code/AUDI/_rn/src/jai-test-1-stack.ts:8:5)",
+              "Object.<anonymous> (/Users/Jai/Downloads/Code/AUDI/_rn/src/index.ts:5:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/ts-node/src/index.ts:1295:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/ts-node/src/index.ts:1298:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/ts-node/src/bin.ts:246:14)",
+              "Object.<anonymous> (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/ts-node/src/bin.ts:382:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "/Users/Jai/.nvm/versions/node/v14.16.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/JaiTest1Stack/AssetParameters/257070d30dfb485ae8d4f96e7451dd639bc6ff56843ec55e29c783b0abb88fd0/S3Bucket": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParameters257070d30dfb485ae8d4f96e7451dd639bc6ff56843ec55e29c783b0abb88fd0S3BucketDCFA7F2B",
+            "trace": [
+              "new FileAssetParameters (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/@aws-cdk/core/lib/private/asset-parameters.ts:16:32)",
+              "LegacyStackSynthesizer.doAddFileAsset (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:154:16)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:74:19)",
+              "JaiTest1Stack.addFileAsset (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/@aws-cdk/core/lib/stack.ts:657:29)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:78:25)",
+              "new Asset (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:143:40)",
+              "AssetCode.bind (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/@aws-cdk/aws-lambda/lib/code.ts:267:20)",
+              "new Function (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/@aws-cdk/aws-lambda/lib/function.ts:580:29)",
+              "new NodejsFunction (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/@aws-cdk/aws-lambda-nodejs/lib/function.ts:113:5)",
+              "new SomeService (/Users/Jai/Downloads/Code/AUDI/_rn/src/jai-test-1-service.ts:11:21)",
+              "new JaiTest1Stack (/Users/Jai/Downloads/Code/AUDI/_rn/src/jai-test-1-stack.ts:8:5)",
+              "Object.<anonymous> (/Users/Jai/Downloads/Code/AUDI/_rn/src/index.ts:5:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/ts-node/src/index.ts:1295:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/ts-node/src/index.ts:1298:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/ts-node/src/bin.ts:246:14)",
+              "Object.<anonymous> (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/ts-node/src/bin.ts:382:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "/Users/Jai/.nvm/versions/node/v14.16.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/JaiTest1Stack/AssetParameters/257070d30dfb485ae8d4f96e7451dd639bc6ff56843ec55e29c783b0abb88fd0/S3VersionKey": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParameters257070d30dfb485ae8d4f96e7451dd639bc6ff56843ec55e29c783b0abb88fd0S3VersionKeyFA393294",
+            "trace": [
+              "new FileAssetParameters (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/@aws-cdk/core/lib/private/asset-parameters.ts:21:31)",
+              "LegacyStackSynthesizer.doAddFileAsset (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:154:16)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:74:19)",
+              "JaiTest1Stack.addFileAsset (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/@aws-cdk/core/lib/stack.ts:657:29)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:78:25)",
+              "new Asset (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:143:40)",
+              "AssetCode.bind (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/@aws-cdk/aws-lambda/lib/code.ts:267:20)",
+              "new Function (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/@aws-cdk/aws-lambda/lib/function.ts:580:29)",
+              "new NodejsFunction (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/@aws-cdk/aws-lambda-nodejs/lib/function.ts:113:5)",
+              "new SomeService (/Users/Jai/Downloads/Code/AUDI/_rn/src/jai-test-1-service.ts:11:21)",
+              "new JaiTest1Stack (/Users/Jai/Downloads/Code/AUDI/_rn/src/jai-test-1-stack.ts:8:5)",
+              "Object.<anonymous> (/Users/Jai/Downloads/Code/AUDI/_rn/src/index.ts:5:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/ts-node/src/index.ts:1295:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/ts-node/src/index.ts:1298:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/ts-node/src/bin.ts:246:14)",
+              "Object.<anonymous> (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/ts-node/src/bin.ts:382:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "/Users/Jai/.nvm/versions/node/v14.16.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/JaiTest1Stack/AssetParameters/257070d30dfb485ae8d4f96e7451dd639bc6ff56843ec55e29c783b0abb88fd0/ArtifactHash": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParameters257070d30dfb485ae8d4f96e7451dd639bc6ff56843ec55e29c783b0abb88fd0ArtifactHash0BA05952",
+            "trace": [
+              "new FileAssetParameters (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/@aws-cdk/core/lib/private/asset-parameters.ts:26:34)",
+              "LegacyStackSynthesizer.doAddFileAsset (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:154:16)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:74:19)",
+              "JaiTest1Stack.addFileAsset (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/@aws-cdk/core/lib/stack.ts:657:29)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:78:25)",
+              "new Asset (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:143:40)",
+              "AssetCode.bind (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/@aws-cdk/aws-lambda/lib/code.ts:267:20)",
+              "new Function (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/@aws-cdk/aws-lambda/lib/function.ts:580:29)",
+              "new NodejsFunction (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/@aws-cdk/aws-lambda-nodejs/lib/function.ts:113:5)",
+              "new SomeService (/Users/Jai/Downloads/Code/AUDI/_rn/src/jai-test-1-service.ts:11:21)",
+              "new JaiTest1Stack (/Users/Jai/Downloads/Code/AUDI/_rn/src/jai-test-1-stack.ts:8:5)",
+              "Object.<anonymous> (/Users/Jai/Downloads/Code/AUDI/_rn/src/index.ts:5:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/ts-node/src/index.ts:1295:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/ts-node/src/index.ts:1298:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/ts-node/src/bin.ts:246:14)",
+              "Object.<anonymous> (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/ts-node/src/bin.ts:382:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "/Users/Jai/.nvm/versions/node/v14.16.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/JaiTest1Stack/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata",
+            "trace": [
+              "new MetadataResource (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/@aws-cdk/core/lib/private/metadata-resource.ts:51:24)",
+              "/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/@aws-cdk/core/lib/private/synthesis.ts:140:5",
+              "visit (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/@aws-cdk/core/lib/private/synthesis.ts:201:5)",
+              "visit (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/@aws-cdk/core/lib/private/synthesis.ts:197:5)",
+              "injectMetadataResources (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/@aws-cdk/core/lib/private/synthesis.ts:131:3)",
+              "Object.synthesize (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/@aws-cdk/core/lib/private/synthesis.ts:18:3)",
+              "App.synth (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/@aws-cdk/core/lib/stage.ts:188:23)",
+              "process.<anonymous> (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/@aws-cdk/core/lib/app.ts:123:45)",
+              "Object.onceWrapper (events.js:422:26)",
+              "process.emit (events.js:315:20)",
+              "process.EventEmitter.emit (domain.js:467:12)",
+              "process.emit (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/source-map-support/source-map-support.js:495:21)"
+            ]
+          }
+        ],
+        "/JaiTest1Stack/CDKMetadata/Condition": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadataAvailable",
+            "trace": [
+              "new MetadataResource (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/@aws-cdk/core/lib/private/metadata-resource.ts:60:27)",
+              "/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/@aws-cdk/core/lib/private/synthesis.ts:140:5",
+              "visit (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/@aws-cdk/core/lib/private/synthesis.ts:201:5)",
+              "visit (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/@aws-cdk/core/lib/private/synthesis.ts:197:5)",
+              "injectMetadataResources (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/@aws-cdk/core/lib/private/synthesis.ts:131:3)",
+              "Object.synthesize (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/@aws-cdk/core/lib/private/synthesis.ts:18:3)",
+              "App.synth (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/@aws-cdk/core/lib/stage.ts:188:23)",
+              "process.<anonymous> (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/@aws-cdk/core/lib/app.ts:123:45)",
+              "Object.onceWrapper (events.js:422:26)",
+              "process.emit (events.js:315:20)",
+              "process.EventEmitter.emit (domain.js:467:12)",
+              "process.emit (/Users/Jai/Downloads/Code/AUDI/_rn/node_modules/source-map-support/source-map-support.js:495:21)"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

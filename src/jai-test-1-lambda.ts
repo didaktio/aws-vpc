@@ -10,7 +10,6 @@ export const handler = async (event: { [key: string]: any }, context: { [key: st
       },
     };
   } catch (error) {
-    console.error(error);
     return {
       statusCode: 500,
       body:{

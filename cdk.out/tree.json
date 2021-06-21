@@ -1,0 +1,1010 @@
+{
+  "version": "tree-0.1",
+  "tree": {
+    "id": "App",
+    "path": "",
+    "children": {
+      "Tree": {
+        "id": "Tree",
+        "path": "Tree",
+        "constructInfo": {
+          "fqn": "@aws-cdk/core.Construct",
+          "version": "1.92.0"
+        }
+      },
+      "JaiTest1Stack": {
+        "id": "JaiTest1Stack",
+        "path": "JaiTest1Stack",
+        "children": {
+          "Jai test 1": {
+            "id": "Jai test 1",
+            "path": "JaiTest1Stack/Jai test 1",
+            "children": {
+              "VPC": {
+                "id": "VPC",
+                "path": "JaiTest1Stack/Jai test 1/VPC",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "JaiTest1Stack/Jai test 1/VPC/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::EC2::VPC",
+                      "aws:cdk:cloudformation:props": {
+                        "cidrBlock": "10.0.0.0/16",
+                        "enableDnsHostnames": true,
+                        "enableDnsSupport": true,
+                        "instanceTenancy": "default",
+                        "tags": [
+                          {
+                            "key": "Name",
+                            "value": "JaiTest1Stack/Jai test 1/VPC"
+                          }
+                        ]
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-ec2.CfnVPC",
+                      "version": "1.92.0"
+                    }
+                  },
+                  "PublicSubnet1": {
+                    "id": "PublicSubnet1",
+                    "path": "JaiTest1Stack/Jai test 1/VPC/PublicSubnet1",
+                    "children": {
+                      "Subnet": {
+                        "id": "Subnet",
+                        "path": "JaiTest1Stack/Jai test 1/VPC/PublicSubnet1/Subnet",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::EC2::Subnet",
+                          "aws:cdk:cloudformation:props": {
+                            "cidrBlock": "10.0.0.0/17",
+                            "vpcId": {
+                              "Ref": "Jaitest1VPCB2D56B44"
+                            },
+                            "availabilityZone": {
+                              "Fn::Select": [
+                                0,
+                                {
+                                  "Fn::GetAZs": ""
+                                }
+                              ]
+                            },
+                            "mapPublicIpOnLaunch": true,
+                            "tags": [
+                              {
+                                "key": "aws-cdk:subnet-name",
+                                "value": "Public"
+                              },
+                              {
+                                "key": "aws-cdk:subnet-type",
+                                "value": "Public"
+                              },
+                              {
+                                "key": "Name",
+                                "value": "JaiTest1Stack/Jai test 1/VPC/PublicSubnet1"
+                              }
+                            ]
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/aws-ec2.CfnSubnet",
+                          "version": "1.92.0"
+                        }
+                      },
+                      "Acl": {
+                        "id": "Acl",
+                        "path": "JaiTest1Stack/Jai test 1/VPC/PublicSubnet1/Acl",
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/core.Resource",
+                          "version": "1.92.0"
+                        }
+                      },
+                      "RouteTable": {
+                        "id": "RouteTable",
+                        "path": "JaiTest1Stack/Jai test 1/VPC/PublicSubnet1/RouteTable",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::EC2::RouteTable",
+                          "aws:cdk:cloudformation:props": {
+                            "vpcId": {
+                              "Ref": "Jaitest1VPCB2D56B44"
+                            },
+                            "tags": [
+                              {
+                                "key": "Name",
+                                "value": "JaiTest1Stack/Jai test 1/VPC/PublicSubnet1"
+                              }
+                            ]
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/aws-ec2.CfnRouteTable",
+                          "version": "1.92.0"
+                        }
+                      },
+                      "RouteTableAssociation": {
+                        "id": "RouteTableAssociation",
+                        "path": "JaiTest1Stack/Jai test 1/VPC/PublicSubnet1/RouteTableAssociation",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::EC2::SubnetRouteTableAssociation",
+                          "aws:cdk:cloudformation:props": {
+                            "routeTableId": {
+                              "Ref": "Jaitest1VPCPublicSubnet1RouteTableF90C1F3F"
+                            },
+                            "subnetId": {
+                              "Ref": "Jaitest1VPCPublicSubnet1Subnet60F18B8D"
+                            }
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/aws-ec2.CfnSubnetRouteTableAssociation",
+                          "version": "1.92.0"
+                        }
+                      },
+                      "DefaultRoute": {
+                        "id": "DefaultRoute",
+                        "path": "JaiTest1Stack/Jai test 1/VPC/PublicSubnet1/DefaultRoute",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::EC2::Route",
+                          "aws:cdk:cloudformation:props": {
+                            "routeTableId": {
+                              "Ref": "Jaitest1VPCPublicSubnet1RouteTableF90C1F3F"
+                            },
+                            "destinationCidrBlock": "0.0.0.0/0",
+                            "gatewayId": {
+                              "Ref": "Jaitest1VPCIGW5E6B9170"
+                            }
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/aws-ec2.CfnRoute",
+                          "version": "1.92.0"
+                        }
+                      },
+                      "EIP": {
+                        "id": "EIP",
+                        "path": "JaiTest1Stack/Jai test 1/VPC/PublicSubnet1/EIP",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::EC2::EIP",
+                          "aws:cdk:cloudformation:props": {
+                            "domain": "vpc",
+                            "tags": [
+                              {
+                                "key": "Name",
+                                "value": "JaiTest1Stack/Jai test 1/VPC/PublicSubnet1"
+                              }
+                            ]
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/aws-ec2.CfnEIP",
+                          "version": "1.92.0"
+                        }
+                      },
+                      "NATGateway": {
+                        "id": "NATGateway",
+                        "path": "JaiTest1Stack/Jai test 1/VPC/PublicSubnet1/NATGateway",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::EC2::NatGateway",
+                          "aws:cdk:cloudformation:props": {
+                            "allocationId": {
+                              "Fn::GetAtt": [
+                                "Jaitest1VPCPublicSubnet1EIPE1BD2027",
+                                "AllocationId"
+                              ]
+                            },
+                            "subnetId": {
+                              "Ref": "Jaitest1VPCPublicSubnet1Subnet60F18B8D"
+                            },
+                            "tags": [
+                              {
+                                "key": "Name",
+                                "value": "JaiTest1Stack/Jai test 1/VPC/PublicSubnet1"
+                              }
+                            ]
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/aws-ec2.CfnNatGateway",
+                          "version": "1.92.0"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-ec2.PublicSubnet",
+                      "version": "1.92.0"
+                    }
+                  },
+                  "PrivateSubnet1": {
+                    "id": "PrivateSubnet1",
+                    "path": "JaiTest1Stack/Jai test 1/VPC/PrivateSubnet1",
+                    "children": {
+                      "Subnet": {
+                        "id": "Subnet",
+                        "path": "JaiTest1Stack/Jai test 1/VPC/PrivateSubnet1/Subnet",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::EC2::Subnet",
+                          "aws:cdk:cloudformation:props": {
+                            "cidrBlock": "10.0.128.0/17",
+                            "vpcId": {
+                              "Ref": "Jaitest1VPCB2D56B44"
+                            },
+                            "availabilityZone": {
+                              "Fn::Select": [
+                                0,
+                                {
+                                  "Fn::GetAZs": ""
+                                }
+                              ]
+                            },
+                            "mapPublicIpOnLaunch": false,
+                            "tags": [
+                              {
+                                "key": "aws-cdk:subnet-name",
+                                "value": "Private"
+                              },
+                              {
+                                "key": "aws-cdk:subnet-type",
+                                "value": "Private"
+                              },
+                              {
+                                "key": "Name",
+                                "value": "JaiTest1Stack/Jai test 1/VPC/PrivateSubnet1"
+                              }
+                            ]
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/aws-ec2.CfnSubnet",
+                          "version": "1.92.0"
+                        }
+                      },
+                      "Acl": {
+                        "id": "Acl",
+                        "path": "JaiTest1Stack/Jai test 1/VPC/PrivateSubnet1/Acl",
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/core.Resource",
+                          "version": "1.92.0"
+                        }
+                      },
+                      "RouteTable": {
+                        "id": "RouteTable",
+                        "path": "JaiTest1Stack/Jai test 1/VPC/PrivateSubnet1/RouteTable",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::EC2::RouteTable",
+                          "aws:cdk:cloudformation:props": {
+                            "vpcId": {
+                              "Ref": "Jaitest1VPCB2D56B44"
+                            },
+                            "tags": [
+                              {
+                                "key": "Name",
+                                "value": "JaiTest1Stack/Jai test 1/VPC/PrivateSubnet1"
+                              }
+                            ]
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/aws-ec2.CfnRouteTable",
+                          "version": "1.92.0"
+                        }
+                      },
+                      "RouteTableAssociation": {
+                        "id": "RouteTableAssociation",
+                        "path": "JaiTest1Stack/Jai test 1/VPC/PrivateSubnet1/RouteTableAssociation",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::EC2::SubnetRouteTableAssociation",
+                          "aws:cdk:cloudformation:props": {
+                            "routeTableId": {
+                              "Ref": "Jaitest1VPCPrivateSubnet1RouteTable384187C1"
+                            },
+                            "subnetId": {
+                              "Ref": "Jaitest1VPCPrivateSubnet1Subnet4F64C80C"
+                            }
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/aws-ec2.CfnSubnetRouteTableAssociation",
+                          "version": "1.92.0"
+                        }
+                      },
+                      "DefaultRoute": {
+                        "id": "DefaultRoute",
+                        "path": "JaiTest1Stack/Jai test 1/VPC/PrivateSubnet1/DefaultRoute",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::EC2::Route",
+                          "aws:cdk:cloudformation:props": {
+                            "routeTableId": {
+                              "Ref": "Jaitest1VPCPrivateSubnet1RouteTable384187C1"
+                            },
+                            "destinationCidrBlock": "0.0.0.0/0",
+                            "natGatewayId": {
+                              "Ref": "Jaitest1VPCPublicSubnet1NATGatewayE8209C81"
+                            }
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/aws-ec2.CfnRoute",
+                          "version": "1.92.0"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-ec2.PrivateSubnet",
+                      "version": "1.92.0"
+                    }
+                  },
+                  "IGW": {
+                    "id": "IGW",
+                    "path": "JaiTest1Stack/Jai test 1/VPC/IGW",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::EC2::InternetGateway",
+                      "aws:cdk:cloudformation:props": {
+                        "tags": [
+                          {
+                            "key": "Name",
+                            "value": "JaiTest1Stack/Jai test 1/VPC"
+                          }
+                        ]
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-ec2.CfnInternetGateway",
+                      "version": "1.92.0"
+                    }
+                  },
+                  "VPCGW": {
+                    "id": "VPCGW",
+                    "path": "JaiTest1Stack/Jai test 1/VPC/VPCGW",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::EC2::VPCGatewayAttachment",
+                      "aws:cdk:cloudformation:props": {
+                        "vpcId": {
+                          "Ref": "Jaitest1VPCB2D56B44"
+                        },
+                        "internetGatewayId": {
+                          "Ref": "Jaitest1VPCIGW5E6B9170"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-ec2.CfnVPCGatewayAttachment",
+                      "version": "1.92.0"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-ec2.Vpc",
+                  "version": "1.92.0"
+                }
+              },
+              "lambda-1": {
+                "id": "lambda-1",
+                "path": "JaiTest1Stack/Jai test 1/lambda-1",
+                "children": {
+                  "ServiceRole": {
+                    "id": "ServiceRole",
+                    "path": "JaiTest1Stack/Jai test 1/lambda-1/ServiceRole",
+                    "children": {
+                      "Resource": {
+                        "id": "Resource",
+                        "path": "JaiTest1Stack/Jai test 1/lambda-1/ServiceRole/Resource",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::IAM::Role",
+                          "aws:cdk:cloudformation:props": {
+                            "assumeRolePolicyDocument": {
+                              "Statement": [
+                                {
+                                  "Action": "sts:AssumeRole",
+                                  "Effect": "Allow",
+                                  "Principal": {
+                                    "Service": "lambda.amazonaws.com"
+                                  }
+                                }
+                              ],
+                              "Version": "2012-10-17"
+                            },
+                            "managedPolicyArns": [
+                              {
+                                "Fn::Join": [
+                                  "",
+                                  [
+                                    "arn:",
+                                    {
+                                      "Ref": "AWS::Partition"
+                                    },
+                                    ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+                                  ]
+                                ]
+                              },
+                              {
+                                "Fn::Join": [
+                                  "",
+                                  [
+                                    "arn:",
+                                    {
+                                      "Ref": "AWS::Partition"
+                                    },
+                                    ":iam::aws:policy/service-role/AWSLambdaVPCAccessExecutionRole"
+                                  ]
+                                ]
+                              }
+                            ]
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/aws-iam.CfnRole",
+                          "version": "1.92.0"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-iam.Role",
+                      "version": "1.92.0"
+                    }
+                  },
+                  "Code": {
+                    "id": "Code",
+                    "path": "JaiTest1Stack/Jai test 1/lambda-1/Code",
+                    "children": {
+                      "Stage": {
+                        "id": "Stage",
+                        "path": "JaiTest1Stack/Jai test 1/lambda-1/Code/Stage",
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/core.AssetStaging",
+                          "version": "1.92.0"
+                        }
+                      },
+                      "AssetBucket": {
+                        "id": "AssetBucket",
+                        "path": "JaiTest1Stack/Jai test 1/lambda-1/Code/AssetBucket",
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/core.Resource",
+                          "version": "1.92.0"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-s3-assets.Asset",
+                      "version": "1.92.0"
+                    }
+                  },
+                  "SecurityGroup": {
+                    "id": "SecurityGroup",
+                    "path": "JaiTest1Stack/Jai test 1/lambda-1/SecurityGroup",
+                    "children": {
+                      "Resource": {
+                        "id": "Resource",
+                        "path": "JaiTest1Stack/Jai test 1/lambda-1/SecurityGroup/Resource",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::EC2::SecurityGroup",
+                          "aws:cdk:cloudformation:props": {
+                            "groupDescription": "Automatic security group for Lambda Function JaiTest1StackJaitest1lambda148815E31",
+                            "securityGroupEgress": [
+                              {
+                                "cidrIp": "0.0.0.0/0",
+                                "description": "Allow all outbound traffic by default",
+                                "ipProtocol": "-1"
+                              }
+                            ],
+                            "vpcId": {
+                              "Ref": "Jaitest1VPCB2D56B44"
+                            }
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/aws-ec2.CfnSecurityGroup",
+                          "version": "1.92.0"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-ec2.SecurityGroup",
+                      "version": "1.92.0"
+                    }
+                  },
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "JaiTest1Stack/Jai test 1/lambda-1/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::Lambda::Function",
+                      "aws:cdk:cloudformation:props": {
+                        "code": {
+                          "s3Bucket": {
+                            "Ref": "AssetParameters257070d30dfb485ae8d4f96e7451dd639bc6ff56843ec55e29c783b0abb88fd0S3BucketDCFA7F2B"
+                          },
+                          "s3Key": {
+                            "Fn::Join": [
+                              "",
+                              [
+                                {
+                                  "Fn::Select": [
+                                    0,
+                                    {
+                                      "Fn::Split": [
+                                        "||",
+                                        {
+                                          "Ref": "AssetParameters257070d30dfb485ae8d4f96e7451dd639bc6ff56843ec55e29c783b0abb88fd0S3VersionKeyFA393294"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "Fn::Select": [
+                                    1,
+                                    {
+                                      "Fn::Split": [
+                                        "||",
+                                        {
+                                          "Ref": "AssetParameters257070d30dfb485ae8d4f96e7451dd639bc6ff56843ec55e29c783b0abb88fd0S3VersionKeyFA393294"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            ]
+                          }
+                        },
+                        "role": {
+                          "Fn::GetAtt": [
+                            "Jaitest1lambda1ServiceRoleCD72FA8A",
+                            "Arn"
+                          ]
+                        },
+                        "environment": {
+                          "variables": {
+                            "AWS_NODEJS_CONNECTION_REUSE_ENABLED": "1"
+                          }
+                        },
+                        "handler": "index.handler",
+                        "runtime": "nodejs14.x",
+                        "vpcConfig": {
+                          "subnetIds": [
+                            {
+                              "Ref": "Jaitest1VPCPrivateSubnet1Subnet4F64C80C"
+                            }
+                          ],
+                          "securityGroupIds": [
+                            {
+                              "Fn::GetAtt": [
+                                "Jaitest1lambda1SecurityGroup03659F34",
+                                "GroupId"
+                              ]
+                            }
+                          ]
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-lambda.CfnFunction",
+                      "version": "1.92.0"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-lambda-nodejs.NodejsFunction",
+                  "version": "1.92.0"
+                }
+              },
+              "lambda-1-api": {
+                "id": "lambda-1-api",
+                "path": "JaiTest1Stack/Jai test 1/lambda-1-api",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "JaiTest1Stack/Jai test 1/lambda-1-api/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::ApiGateway::RestApi",
+                      "aws:cdk:cloudformation:props": {
+                        "name": "lambda-1-api"
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-apigateway.CfnRestApi",
+                      "version": "1.92.0"
+                    }
+                  },
+                  "CloudWatchRole": {
+                    "id": "CloudWatchRole",
+                    "path": "JaiTest1Stack/Jai test 1/lambda-1-api/CloudWatchRole",
+                    "children": {
+                      "Resource": {
+                        "id": "Resource",
+                        "path": "JaiTest1Stack/Jai test 1/lambda-1-api/CloudWatchRole/Resource",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::IAM::Role",
+                          "aws:cdk:cloudformation:props": {
+                            "assumeRolePolicyDocument": {
+                              "Statement": [
+                                {
+                                  "Action": "sts:AssumeRole",
+                                  "Effect": "Allow",
+                                  "Principal": {
+                                    "Service": "apigateway.amazonaws.com"
+                                  }
+                                }
+                              ],
+                              "Version": "2012-10-17"
+                            },
+                            "managedPolicyArns": [
+                              {
+                                "Fn::Join": [
+                                  "",
+                                  [
+                                    "arn:",
+                                    {
+                                      "Ref": "AWS::Partition"
+                                    },
+                                    ":iam::aws:policy/service-role/AmazonAPIGatewayPushToCloudWatchLogs"
+                                  ]
+                                ]
+                              }
+                            ]
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/aws-iam.CfnRole",
+                          "version": "1.92.0"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-iam.Role",
+                      "version": "1.92.0"
+                    }
+                  },
+                  "Account": {
+                    "id": "Account",
+                    "path": "JaiTest1Stack/Jai test 1/lambda-1-api/Account",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::ApiGateway::Account",
+                      "aws:cdk:cloudformation:props": {
+                        "cloudWatchRoleArn": {
+                          "Fn::GetAtt": [
+                            "Jaitest1lambda1apiCloudWatchRoleDEAA85D0",
+                            "Arn"
+                          ]
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-apigateway.CfnAccount",
+                      "version": "1.92.0"
+                    }
+                  },
+                  "Deployment": {
+                    "id": "Deployment",
+                    "path": "JaiTest1Stack/Jai test 1/lambda-1-api/Deployment",
+                    "children": {
+                      "Resource": {
+                        "id": "Resource",
+                        "path": "JaiTest1Stack/Jai test 1/lambda-1-api/Deployment/Resource",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::ApiGateway::Deployment",
+                          "aws:cdk:cloudformation:props": {
+                            "restApiId": {
+                              "Ref": "Jaitest1lambda1apiD48EAEBB"
+                            },
+                            "description": "Automatically created by the RestApi construct"
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/aws-apigateway.CfnDeployment",
+                          "version": "1.92.0"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-apigateway.Deployment",
+                      "version": "1.92.0"
+                    }
+                  },
+                  "DeploymentStage.prod": {
+                    "id": "DeploymentStage.prod",
+                    "path": "JaiTest1Stack/Jai test 1/lambda-1-api/DeploymentStage.prod",
+                    "children": {
+                      "Resource": {
+                        "id": "Resource",
+                        "path": "JaiTest1Stack/Jai test 1/lambda-1-api/DeploymentStage.prod/Resource",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::ApiGateway::Stage",
+                          "aws:cdk:cloudformation:props": {
+                            "restApiId": {
+                              "Ref": "Jaitest1lambda1apiD48EAEBB"
+                            },
+                            "deploymentId": {
+                              "Ref": "Jaitest1lambda1apiDeploymentD4B8485F7c9e3d9d6bce5ee2d74b8a22c5844397"
+                            },
+                            "methodSettings": [
+                              {
+                                "httpMethod": "*",
+                                "resourcePath": "/*",
+                                "loggingLevel": "INFO"
+                              }
+                            ],
+                            "stageName": "prod"
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/aws-apigateway.CfnStage",
+                          "version": "1.92.0"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-apigateway.Stage",
+                      "version": "1.92.0"
+                    }
+                  },
+                  "Endpoint": {
+                    "id": "Endpoint",
+                    "path": "JaiTest1Stack/Jai test 1/lambda-1-api/Endpoint",
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/core.CfnOutput",
+                      "version": "1.92.0"
+                    }
+                  },
+                  "Default": {
+                    "id": "Default",
+                    "path": "JaiTest1Stack/Jai test 1/lambda-1-api/Default",
+                    "children": {
+                      "GET": {
+                        "id": "GET",
+                        "path": "JaiTest1Stack/Jai test 1/lambda-1-api/Default/GET",
+                        "children": {
+                          "ApiPermission.JaiTest1StackJaitest1lambda1api013BE073.GET..": {
+                            "id": "ApiPermission.JaiTest1StackJaitest1lambda1api013BE073.GET..",
+                            "path": "JaiTest1Stack/Jai test 1/lambda-1-api/Default/GET/ApiPermission.JaiTest1StackJaitest1lambda1api013BE073.GET..",
+                            "attributes": {
+                              "aws:cdk:cloudformation:type": "AWS::Lambda::Permission",
+                              "aws:cdk:cloudformation:props": {
+                                "action": "lambda:InvokeFunction",
+                                "functionName": {
+                                  "Fn::GetAtt": [
+                                    "Jaitest1lambda1B15BB37A",
+                                    "Arn"
+                                  ]
+                                },
+                                "principal": "apigateway.amazonaws.com",
+                                "sourceArn": {
+                                  "Fn::Join": [
+                                    "",
+                                    [
+                                      "arn:",
+                                      {
+                                        "Ref": "AWS::Partition"
+                                      },
+                                      ":execute-api:",
+                                      {
+                                        "Ref": "AWS::Region"
+                                      },
+                                      ":",
+                                      {
+                                        "Ref": "AWS::AccountId"
+                                      },
+                                      ":",
+                                      {
+                                        "Ref": "Jaitest1lambda1apiD48EAEBB"
+                                      },
+                                      "/",
+                                      {
+                                        "Ref": "Jaitest1lambda1apiDeploymentStageprod4E25E0F9"
+                                      },
+                                      "/GET/"
+                                    ]
+                                  ]
+                                }
+                              }
+                            },
+                            "constructInfo": {
+                              "fqn": "@aws-cdk/aws-lambda.CfnPermission",
+                              "version": "1.92.0"
+                            }
+                          },
+                          "ApiPermission.Test.JaiTest1StackJaitest1lambda1api013BE073.GET..": {
+                            "id": "ApiPermission.Test.JaiTest1StackJaitest1lambda1api013BE073.GET..",
+                            "path": "JaiTest1Stack/Jai test 1/lambda-1-api/Default/GET/ApiPermission.Test.JaiTest1StackJaitest1lambda1api013BE073.GET..",
+                            "attributes": {
+                              "aws:cdk:cloudformation:type": "AWS::Lambda::Permission",
+                              "aws:cdk:cloudformation:props": {
+                                "action": "lambda:InvokeFunction",
+                                "functionName": {
+                                  "Fn::GetAtt": [
+                                    "Jaitest1lambda1B15BB37A",
+                                    "Arn"
+                                  ]
+                                },
+                                "principal": "apigateway.amazonaws.com",
+                                "sourceArn": {
+                                  "Fn::Join": [
+                                    "",
+                                    [
+                                      "arn:",
+                                      {
+                                        "Ref": "AWS::Partition"
+                                      },
+                                      ":execute-api:",
+                                      {
+                                        "Ref": "AWS::Region"
+                                      },
+                                      ":",
+                                      {
+                                        "Ref": "AWS::AccountId"
+                                      },
+                                      ":",
+                                      {
+                                        "Ref": "Jaitest1lambda1apiD48EAEBB"
+                                      },
+                                      "/test-invoke-stage/GET/"
+                                    ]
+                                  ]
+                                }
+                              }
+                            },
+                            "constructInfo": {
+                              "fqn": "@aws-cdk/aws-lambda.CfnPermission",
+                              "version": "1.92.0"
+                            }
+                          },
+                          "Resource": {
+                            "id": "Resource",
+                            "path": "JaiTest1Stack/Jai test 1/lambda-1-api/Default/GET/Resource",
+                            "attributes": {
+                              "aws:cdk:cloudformation:type": "AWS::ApiGateway::Method",
+                              "aws:cdk:cloudformation:props": {
+                                "httpMethod": "GET",
+                                "resourceId": {
+                                  "Fn::GetAtt": [
+                                    "Jaitest1lambda1apiD48EAEBB",
+                                    "RootResourceId"
+                                  ]
+                                },
+                                "restApiId": {
+                                  "Ref": "Jaitest1lambda1apiD48EAEBB"
+                                },
+                                "authorizationType": "NONE",
+                                "integration": {
+                                  "type": "AWS_PROXY",
+                                  "uri": {
+                                    "Fn::Join": [
+                                      "",
+                                      [
+                                        "arn:",
+                                        {
+                                          "Ref": "AWS::Partition"
+                                        },
+                                        ":apigateway:",
+                                        {
+                                          "Ref": "AWS::Region"
+                                        },
+                                        ":lambda:path/2015-03-31/functions/",
+                                        {
+                                          "Fn::GetAtt": [
+                                            "Jaitest1lambda1B15BB37A",
+                                            "Arn"
+                                          ]
+                                        },
+                                        "/invocations"
+                                      ]
+                                    ]
+                                  },
+                                  "integrationHttpMethod": "POST",
+                                  "requestTemplates": {
+                                    "application/json": "{ 'statusCode': '200' }"
+                                  }
+                                }
+                              }
+                            },
+                            "constructInfo": {
+                              "fqn": "@aws-cdk/aws-apigateway.CfnMethod",
+                              "version": "1.92.0"
+                            }
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/aws-apigateway.Method",
+                          "version": "1.92.0"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-apigateway.ResourceBase",
+                      "version": "1.92.0"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-apigateway.RestApi",
+                  "version": "1.92.0"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "@aws-cdk/core.Construct",
+              "version": "1.92.0"
+            }
+          },
+          "AssetParameters": {
+            "id": "AssetParameters",
+            "path": "JaiTest1Stack/AssetParameters",
+            "children": {
+              "257070d30dfb485ae8d4f96e7451dd639bc6ff56843ec55e29c783b0abb88fd0": {
+                "id": "257070d30dfb485ae8d4f96e7451dd639bc6ff56843ec55e29c783b0abb88fd0",
+                "path": "JaiTest1Stack/AssetParameters/257070d30dfb485ae8d4f96e7451dd639bc6ff56843ec55e29c783b0abb88fd0",
+                "children": {
+                  "S3Bucket": {
+                    "id": "S3Bucket",
+                    "path": "JaiTest1Stack/AssetParameters/257070d30dfb485ae8d4f96e7451dd639bc6ff56843ec55e29c783b0abb88fd0/S3Bucket",
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/core.CfnParameter",
+                      "version": "1.92.0"
+                    }
+                  },
+                  "S3VersionKey": {
+                    "id": "S3VersionKey",
+                    "path": "JaiTest1Stack/AssetParameters/257070d30dfb485ae8d4f96e7451dd639bc6ff56843ec55e29c783b0abb88fd0/S3VersionKey",
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/core.CfnParameter",
+                      "version": "1.92.0"
+                    }
+                  },
+                  "ArtifactHash": {
+                    "id": "ArtifactHash",
+                    "path": "JaiTest1Stack/AssetParameters/257070d30dfb485ae8d4f96e7451dd639bc6ff56843ec55e29c783b0abb88fd0/ArtifactHash",
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/core.CfnParameter",
+                      "version": "1.92.0"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/core.Construct",
+                  "version": "1.92.0"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "@aws-cdk/core.Construct",
+              "version": "1.92.0"
+            }
+          },
+          "CDKMetadata": {
+            "id": "CDKMetadata",
+            "path": "JaiTest1Stack/CDKMetadata",
+            "children": {
+              "Default": {
+                "id": "Default",
+                "path": "JaiTest1Stack/CDKMetadata/Default",
+                "constructInfo": {
+                  "fqn": "@aws-cdk/core.CfnResource",
+                  "version": "1.92.0"
+                }
+              },
+              "Condition": {
+                "id": "Condition",
+                "path": "JaiTest1Stack/CDKMetadata/Condition",
+                "constructInfo": {
+                  "fqn": "@aws-cdk/core.CfnCondition",
+                  "version": "1.92.0"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "@aws-cdk/core.Construct",
+              "version": "1.92.0"
+            }
+          }
+        },
+        "constructInfo": {
+          "fqn": "@aws-cdk/core.Stack",
+          "version": "1.92.0"
+        }
+      }
+    },
+    "constructInfo": {
+      "fqn": "@aws-cdk/core.App",
+      "version": "1.92.0"
+    }
+  }
+}

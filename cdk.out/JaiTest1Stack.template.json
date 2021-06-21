@@ -1,0 +1,853 @@
+{
+  "Resources": {
+    "Jaitest1VPCB2D56B44": {
+      "Type": "AWS::EC2::VPC",
+      "Properties": {
+        "CidrBlock": "10.0.0.0/16",
+        "EnableDnsHostnames": true,
+        "EnableDnsSupport": true,
+        "InstanceTenancy": "default",
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "JaiTest1Stack/Jai test 1/VPC"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "JaiTest1Stack/Jai test 1/VPC/Resource"
+      }
+    },
+    "Jaitest1VPCPublicSubnet1Subnet60F18B8D": {
+      "Type": "AWS::EC2::Subnet",
+      "Properties": {
+        "CidrBlock": "10.0.0.0/17",
+        "VpcId": {
+          "Ref": "Jaitest1VPCB2D56B44"
+        },
+        "AvailabilityZone": {
+          "Fn::Select": [
+            0,
+            {
+              "Fn::GetAZs": ""
+            }
+          ]
+        },
+        "MapPublicIpOnLaunch": true,
+        "Tags": [
+          {
+            "Key": "aws-cdk:subnet-name",
+            "Value": "Public"
+          },
+          {
+            "Key": "aws-cdk:subnet-type",
+            "Value": "Public"
+          },
+          {
+            "Key": "Name",
+            "Value": "JaiTest1Stack/Jai test 1/VPC/PublicSubnet1"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "JaiTest1Stack/Jai test 1/VPC/PublicSubnet1/Subnet"
+      }
+    },
+    "Jaitest1VPCPublicSubnet1RouteTableF90C1F3F": {
+      "Type": "AWS::EC2::RouteTable",
+      "Properties": {
+        "VpcId": {
+          "Ref": "Jaitest1VPCB2D56B44"
+        },
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "JaiTest1Stack/Jai test 1/VPC/PublicSubnet1"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "JaiTest1Stack/Jai test 1/VPC/PublicSubnet1/RouteTable"
+      }
+    },
+    "Jaitest1VPCPublicSubnet1RouteTableAssociation145F9CED": {
+      "Type": "AWS::EC2::SubnetRouteTableAssociation",
+      "Properties": {
+        "RouteTableId": {
+          "Ref": "Jaitest1VPCPublicSubnet1RouteTableF90C1F3F"
+        },
+        "SubnetId": {
+          "Ref": "Jaitest1VPCPublicSubnet1Subnet60F18B8D"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "JaiTest1Stack/Jai test 1/VPC/PublicSubnet1/RouteTableAssociation"
+      }
+    },
+    "Jaitest1VPCPublicSubnet1DefaultRoute88C0ACE3": {
+      "Type": "AWS::EC2::Route",
+      "Properties": {
+        "RouteTableId": {
+          "Ref": "Jaitest1VPCPublicSubnet1RouteTableF90C1F3F"
+        },
+        "DestinationCidrBlock": "0.0.0.0/0",
+        "GatewayId": {
+          "Ref": "Jaitest1VPCIGW5E6B9170"
+        }
+      },
+      "DependsOn": [
+        "Jaitest1VPCVPCGW370A7ACD"
+      ],
+      "Metadata": {
+        "aws:cdk:path": "JaiTest1Stack/Jai test 1/VPC/PublicSubnet1/DefaultRoute"
+      }
+    },
+    "Jaitest1VPCPublicSubnet1EIPE1BD2027": {
+      "Type": "AWS::EC2::EIP",
+      "Properties": {
+        "Domain": "vpc",
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "JaiTest1Stack/Jai test 1/VPC/PublicSubnet1"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "JaiTest1Stack/Jai test 1/VPC/PublicSubnet1/EIP"
+      }
+    },
+    "Jaitest1VPCPublicSubnet1NATGatewayE8209C81": {
+      "Type": "AWS::EC2::NatGateway",
+      "Properties": {
+        "AllocationId": {
+          "Fn::GetAtt": [
+            "Jaitest1VPCPublicSubnet1EIPE1BD2027",
+            "AllocationId"
+          ]
+        },
+        "SubnetId": {
+          "Ref": "Jaitest1VPCPublicSubnet1Subnet60F18B8D"
+        },
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "JaiTest1Stack/Jai test 1/VPC/PublicSubnet1"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "JaiTest1Stack/Jai test 1/VPC/PublicSubnet1/NATGateway"
+      }
+    },
+    "Jaitest1VPCPrivateSubnet1Subnet4F64C80C": {
+      "Type": "AWS::EC2::Subnet",
+      "Properties": {
+        "CidrBlock": "10.0.128.0/17",
+        "VpcId": {
+          "Ref": "Jaitest1VPCB2D56B44"
+        },
+        "AvailabilityZone": {
+          "Fn::Select": [
+            0,
+            {
+              "Fn::GetAZs": ""
+            }
+          ]
+        },
+        "MapPublicIpOnLaunch": false,
+        "Tags": [
+          {
+            "Key": "aws-cdk:subnet-name",
+            "Value": "Private"
+          },
+          {
+            "Key": "aws-cdk:subnet-type",
+            "Value": "Private"
+          },
+          {
+            "Key": "Name",
+            "Value": "JaiTest1Stack/Jai test 1/VPC/PrivateSubnet1"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "JaiTest1Stack/Jai test 1/VPC/PrivateSubnet1/Subnet"
+      }
+    },
+    "Jaitest1VPCPrivateSubnet1RouteTable384187C1": {
+      "Type": "AWS::EC2::RouteTable",
+      "Properties": {
+        "VpcId": {
+          "Ref": "Jaitest1VPCB2D56B44"
+        },
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "JaiTest1Stack/Jai test 1/VPC/PrivateSubnet1"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "JaiTest1Stack/Jai test 1/VPC/PrivateSubnet1/RouteTable"
+      }
+    },
+    "Jaitest1VPCPrivateSubnet1RouteTableAssociation5D115A9B": {
+      "Type": "AWS::EC2::SubnetRouteTableAssociation",
+      "Properties": {
+        "RouteTableId": {
+          "Ref": "Jaitest1VPCPrivateSubnet1RouteTable384187C1"
+        },
+        "SubnetId": {
+          "Ref": "Jaitest1VPCPrivateSubnet1Subnet4F64C80C"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "JaiTest1Stack/Jai test 1/VPC/PrivateSubnet1/RouteTableAssociation"
+      }
+    },
+    "Jaitest1VPCPrivateSubnet1DefaultRouteF6C66984": {
+      "Type": "AWS::EC2::Route",
+      "Properties": {
+        "RouteTableId": {
+          "Ref": "Jaitest1VPCPrivateSubnet1RouteTable384187C1"
+        },
+        "DestinationCidrBlock": "0.0.0.0/0",
+        "NatGatewayId": {
+          "Ref": "Jaitest1VPCPublicSubnet1NATGatewayE8209C81"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "JaiTest1Stack/Jai test 1/VPC/PrivateSubnet1/DefaultRoute"
+      }
+    },
+    "Jaitest1VPCIGW5E6B9170": {
+      "Type": "AWS::EC2::InternetGateway",
+      "Properties": {
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "JaiTest1Stack/Jai test 1/VPC"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "JaiTest1Stack/Jai test 1/VPC/IGW"
+      }
+    },
+    "Jaitest1VPCVPCGW370A7ACD": {
+      "Type": "AWS::EC2::VPCGatewayAttachment",
+      "Properties": {
+        "VpcId": {
+          "Ref": "Jaitest1VPCB2D56B44"
+        },
+        "InternetGatewayId": {
+          "Ref": "Jaitest1VPCIGW5E6B9170"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "JaiTest1Stack/Jai test 1/VPC/VPCGW"
+      }
+    },
+    "Jaitest1lambda1ServiceRoleCD72FA8A": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "lambda.amazonaws.com"
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "ManagedPolicyArns": [
+          {
+            "Fn::Join": [
+              "",
+              [
+                "arn:",
+                {
+                  "Ref": "AWS::Partition"
+                },
+                ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+              ]
+            ]
+          },
+          {
+            "Fn::Join": [
+              "",
+              [
+                "arn:",
+                {
+                  "Ref": "AWS::Partition"
+                },
+                ":iam::aws:policy/service-role/AWSLambdaVPCAccessExecutionRole"
+              ]
+            ]
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "JaiTest1Stack/Jai test 1/lambda-1/ServiceRole/Resource"
+      }
+    },
+    "Jaitest1lambda1SecurityGroup03659F34": {
+      "Type": "AWS::EC2::SecurityGroup",
+      "Properties": {
+        "GroupDescription": "Automatic security group for Lambda Function JaiTest1StackJaitest1lambda148815E31",
+        "SecurityGroupEgress": [
+          {
+            "CidrIp": "0.0.0.0/0",
+            "Description": "Allow all outbound traffic by default",
+            "IpProtocol": "-1"
+          }
+        ],
+        "VpcId": {
+          "Ref": "Jaitest1VPCB2D56B44"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "JaiTest1Stack/Jai test 1/lambda-1/SecurityGroup/Resource"
+      }
+    },
+    "Jaitest1lambda1B15BB37A": {
+      "Type": "AWS::Lambda::Function",
+      "Properties": {
+        "Code": {
+          "S3Bucket": {
+            "Ref": "AssetParameters257070d30dfb485ae8d4f96e7451dd639bc6ff56843ec55e29c783b0abb88fd0S3BucketDCFA7F2B"
+          },
+          "S3Key": {
+            "Fn::Join": [
+              "",
+              [
+                {
+                  "Fn::Select": [
+                    0,
+                    {
+                      "Fn::Split": [
+                        "||",
+                        {
+                          "Ref": "AssetParameters257070d30dfb485ae8d4f96e7451dd639bc6ff56843ec55e29c783b0abb88fd0S3VersionKeyFA393294"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "Fn::Select": [
+                    1,
+                    {
+                      "Fn::Split": [
+                        "||",
+                        {
+                          "Ref": "AssetParameters257070d30dfb485ae8d4f96e7451dd639bc6ff56843ec55e29c783b0abb88fd0S3VersionKeyFA393294"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            ]
+          }
+        },
+        "Role": {
+          "Fn::GetAtt": [
+            "Jaitest1lambda1ServiceRoleCD72FA8A",
+            "Arn"
+          ]
+        },
+        "Environment": {
+          "Variables": {
+            "AWS_NODEJS_CONNECTION_REUSE_ENABLED": "1"
+          }
+        },
+        "Handler": "index.handler",
+        "Runtime": "nodejs14.x",
+        "VpcConfig": {
+          "SecurityGroupIds": [
+            {
+              "Fn::GetAtt": [
+                "Jaitest1lambda1SecurityGroup03659F34",
+                "GroupId"
+              ]
+            }
+          ],
+          "SubnetIds": [
+            {
+              "Ref": "Jaitest1VPCPrivateSubnet1Subnet4F64C80C"
+            }
+          ]
+        }
+      },
+      "DependsOn": [
+        "Jaitest1lambda1ServiceRoleCD72FA8A"
+      ],
+      "Metadata": {
+        "aws:cdk:path": "JaiTest1Stack/Jai test 1/lambda-1/Resource",
+        "aws:asset:path": "asset.257070d30dfb485ae8d4f96e7451dd639bc6ff56843ec55e29c783b0abb88fd0",
+        "aws:asset:property": "Code"
+      }
+    },
+    "Jaitest1lambda1apiD48EAEBB": {
+      "Type": "AWS::ApiGateway::RestApi",
+      "Properties": {
+        "Name": "lambda-1-api"
+      },
+      "Metadata": {
+        "aws:cdk:path": "JaiTest1Stack/Jai test 1/lambda-1-api/Resource"
+      }
+    },
+    "Jaitest1lambda1apiCloudWatchRoleDEAA85D0": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "apigateway.amazonaws.com"
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "ManagedPolicyArns": [
+          {
+            "Fn::Join": [
+              "",
+              [
+                "arn:",
+                {
+                  "Ref": "AWS::Partition"
+                },
+                ":iam::aws:policy/service-role/AmazonAPIGatewayPushToCloudWatchLogs"
+              ]
+            ]
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "JaiTest1Stack/Jai test 1/lambda-1-api/CloudWatchRole/Resource"
+      }
+    },
+    "Jaitest1lambda1apiAccount66333847": {
+      "Type": "AWS::ApiGateway::Account",
+      "Properties": {
+        "CloudWatchRoleArn": {
+          "Fn::GetAtt": [
+            "Jaitest1lambda1apiCloudWatchRoleDEAA85D0",
+            "Arn"
+          ]
+        }
+      },
+      "DependsOn": [
+        "Jaitest1lambda1apiD48EAEBB"
+      ],
+      "Metadata": {
+        "aws:cdk:path": "JaiTest1Stack/Jai test 1/lambda-1-api/Account"
+      }
+    },
+    "Jaitest1lambda1apiDeploymentD4B8485F7c9e3d9d6bce5ee2d74b8a22c5844397": {
+      "Type": "AWS::ApiGateway::Deployment",
+      "Properties": {
+        "RestApiId": {
+          "Ref": "Jaitest1lambda1apiD48EAEBB"
+        },
+        "Description": "Automatically created by the RestApi construct"
+      },
+      "DependsOn": [
+        "Jaitest1lambda1apiGET78FC94F1"
+      ],
+      "Metadata": {
+        "aws:cdk:path": "JaiTest1Stack/Jai test 1/lambda-1-api/Deployment/Resource"
+      }
+    },
+    "Jaitest1lambda1apiDeploymentStageprod4E25E0F9": {
+      "Type": "AWS::ApiGateway::Stage",
+      "Properties": {
+        "RestApiId": {
+          "Ref": "Jaitest1lambda1apiD48EAEBB"
+        },
+        "DeploymentId": {
+          "Ref": "Jaitest1lambda1apiDeploymentD4B8485F7c9e3d9d6bce5ee2d74b8a22c5844397"
+        },
+        "MethodSettings": [
+          {
+            "HttpMethod": "*",
+            "LoggingLevel": "INFO",
+            "ResourcePath": "/*"
+          }
+        ],
+        "StageName": "prod"
+      },
+      "Metadata": {
+        "aws:cdk:path": "JaiTest1Stack/Jai test 1/lambda-1-api/DeploymentStage.prod/Resource"
+      }
+    },
+    "Jaitest1lambda1apiGETApiPermissionJaiTest1StackJaitest1lambda1api013BE073GET44350E97": {
+      "Type": "AWS::Lambda::Permission",
+      "Properties": {
+        "Action": "lambda:InvokeFunction",
+        "FunctionName": {
+          "Fn::GetAtt": [
+            "Jaitest1lambda1B15BB37A",
+            "Arn"
+          ]
+        },
+        "Principal": "apigateway.amazonaws.com",
+        "SourceArn": {
+          "Fn::Join": [
+            "",
+            [
+              "arn:",
+              {
+                "Ref": "AWS::Partition"
+              },
+              ":execute-api:",
+              {
+                "Ref": "AWS::Region"
+              },
+              ":",
+              {
+                "Ref": "AWS::AccountId"
+              },
+              ":",
+              {
+                "Ref": "Jaitest1lambda1apiD48EAEBB"
+              },
+              "/",
+              {
+                "Ref": "Jaitest1lambda1apiDeploymentStageprod4E25E0F9"
+              },
+              "/GET/"
+            ]
+          ]
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "JaiTest1Stack/Jai test 1/lambda-1-api/Default/GET/ApiPermission.JaiTest1StackJaitest1lambda1api013BE073.GET.."
+      }
+    },
+    "Jaitest1lambda1apiGETApiPermissionTestJaiTest1StackJaitest1lambda1api013BE073GET57FCD4DA": {
+      "Type": "AWS::Lambda::Permission",
+      "Properties": {
+        "Action": "lambda:InvokeFunction",
+        "FunctionName": {
+          "Fn::GetAtt": [
+            "Jaitest1lambda1B15BB37A",
+            "Arn"
+          ]
+        },
+        "Principal": "apigateway.amazonaws.com",
+        "SourceArn": {
+          "Fn::Join": [
+            "",
+            [
+              "arn:",
+              {
+                "Ref": "AWS::Partition"
+              },
+              ":execute-api:",
+              {
+                "Ref": "AWS::Region"
+              },
+              ":",
+              {
+                "Ref": "AWS::AccountId"
+              },
+              ":",
+              {
+                "Ref": "Jaitest1lambda1apiD48EAEBB"
+              },
+              "/test-invoke-stage/GET/"
+            ]
+          ]
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "JaiTest1Stack/Jai test 1/lambda-1-api/Default/GET/ApiPermission.Test.JaiTest1StackJaitest1lambda1api013BE073.GET.."
+      }
+    },
+    "Jaitest1lambda1apiGET78FC94F1": {
+      "Type": "AWS::ApiGateway::Method",
+      "Properties": {
+        "HttpMethod": "GET",
+        "ResourceId": {
+          "Fn::GetAtt": [
+            "Jaitest1lambda1apiD48EAEBB",
+            "RootResourceId"
+          ]
+        },
+        "RestApiId": {
+          "Ref": "Jaitest1lambda1apiD48EAEBB"
+        },
+        "AuthorizationType": "NONE",
+        "Integration": {
+          "IntegrationHttpMethod": "POST",
+          "RequestTemplates": {
+            "application/json": "{ 'statusCode': '200' }"
+          },
+          "Type": "AWS_PROXY",
+          "Uri": {
+            "Fn::Join": [
+              "",
+              [
+                "arn:",
+                {
+                  "Ref": "AWS::Partition"
+                },
+                ":apigateway:",
+                {
+                  "Ref": "AWS::Region"
+                },
+                ":lambda:path/2015-03-31/functions/",
+                {
+                  "Fn::GetAtt": [
+                    "Jaitest1lambda1B15BB37A",
+                    "Arn"
+                  ]
+                },
+                "/invocations"
+              ]
+            ]
+          }
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "JaiTest1Stack/Jai test 1/lambda-1-api/Default/GET/Resource"
+      }
+    },
+    "CDKMetadata": {
+      "Type": "AWS::CDK::Metadata",
+      "Properties": {
+        "Modules": "aws-cdk=1.92.0,@aws-cdk/assets=1.92.0,@aws-cdk/aws-apigateway=1.92.0,@aws-cdk/aws-applicationautoscaling=1.92.0,@aws-cdk/aws-autoscaling-common=1.92.0,@aws-cdk/aws-cloudwatch=1.92.0,@aws-cdk/aws-codeguruprofiler=1.92.0,@aws-cdk/aws-ec2=1.92.0,@aws-cdk/aws-ecr=1.92.0,@aws-cdk/aws-ecr-assets=1.92.0,@aws-cdk/aws-events=1.92.0,@aws-cdk/aws-iam=1.92.0,@aws-cdk/aws-kms=1.92.0,@aws-cdk/aws-lambda=1.92.0,@aws-cdk/aws-lambda-nodejs=1.92.0,@aws-cdk/aws-logs=1.92.0,@aws-cdk/aws-s3=1.92.0,@aws-cdk/aws-s3-assets=1.92.0,@aws-cdk/aws-sqs=1.92.0,@aws-cdk/aws-ssm=1.92.0,@aws-cdk/cloud-assembly-schema=1.92.0,@aws-cdk/core=1.92.0,@aws-cdk/cx-api=1.92.0,@aws-cdk/region-info=1.92.0,jsii-runtime=node.js/v14.16.0"
+      },
+      "Metadata": {
+        "aws:cdk:path": "JaiTest1Stack/CDKMetadata/Default"
+      },
+      "Condition": "CDKMetadataAvailable"
+    }
+  },
+  "Outputs": {
+    "Jaitest1lambda1apiEndpoint32497A7E": {
+      "Value": {
+        "Fn::Join": [
+          "",
+          [
+            "https://",
+            {
+              "Ref": "Jaitest1lambda1apiD48EAEBB"
+            },
+            ".execute-api.",
+            {
+              "Ref": "AWS::Region"
+            },
+            ".",
+            {
+              "Ref": "AWS::URLSuffix"
+            },
+            "/",
+            {
+              "Ref": "Jaitest1lambda1apiDeploymentStageprod4E25E0F9"
+            },
+            "/"
+          ]
+        ]
+      }
+    }
+  },
+  "Parameters": {
+    "AssetParameters257070d30dfb485ae8d4f96e7451dd639bc6ff56843ec55e29c783b0abb88fd0S3BucketDCFA7F2B": {
+      "Type": "String",
+      "Description": "S3 bucket for asset \"257070d30dfb485ae8d4f96e7451dd639bc6ff56843ec55e29c783b0abb88fd0\""
+    },
+    "AssetParameters257070d30dfb485ae8d4f96e7451dd639bc6ff56843ec55e29c783b0abb88fd0S3VersionKeyFA393294": {
+      "Type": "String",
+      "Description": "S3 key for asset version \"257070d30dfb485ae8d4f96e7451dd639bc6ff56843ec55e29c783b0abb88fd0\""
+    },
+    "AssetParameters257070d30dfb485ae8d4f96e7451dd639bc6ff56843ec55e29c783b0abb88fd0ArtifactHash0BA05952": {
+      "Type": "String",
+      "Description": "Artifact hash for asset \"257070d30dfb485ae8d4f96e7451dd639bc6ff56843ec55e29c783b0abb88fd0\""
+    }
+  },
+  "Conditions": {
+    "CDKMetadataAvailable": {
+      "Fn::Or": [
+        {
+          "Fn::Or": [
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "ap-east-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "ap-northeast-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "ap-northeast-2"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "ap-south-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "ap-southeast-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "ap-southeast-2"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "ca-central-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "cn-north-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "cn-northwest-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "eu-central-1"
+              ]
+            }
+          ]
+        },
+        {
+          "Fn::Or": [
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "eu-north-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "eu-west-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "eu-west-2"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "eu-west-3"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "me-south-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "sa-east-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "us-east-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "us-east-2"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "us-west-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "us-west-2"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
